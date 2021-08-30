@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<head>
+    <link rel="stylesheet" href="{{url_for ('static',filename='css/main.css')}}">
+</head>
+
+<body>
+
+    <div class="container">
+           <form action="/predict" method="POST">
+               <center><H1>Predictive Maintenance</H1></center>
+
+               <div class ="form-group">
+                   <label for ="Process_temperature">Process Temperature:</label><br>
+                   <input type="text" class ="form-control" id="Process_temperature" placeholder="Enter Process temperature" name="Process_temperature" value = "0" required="required"><br>
+               </div>
+
+               <div class ="form-group">
+                   <label for ="Rotational_speed">Rotational Speed:</label><br>
+                   <input type="text" class ="form-control" id="Rotational_speed" placeholder="Enter Rotational Speed" name="Rotational_speed" value ="0" required="required"><br>
+               </div>
+
+               <div class ="form-group">
+                   <label for ="Torque">Torque:</label><br>
+                   <input type="text" class ="form-control" id="Torque" placeholder="Enter Torque" name="Torque" value="0" required="required"><br>
+               </div>
+
+               <div class ="form-group">
+                   <label for ="Tool_wear">Tool Wear:</label><br>
+                   <input type="text" class ="form-control" id="Tool_wear" placeholder="Enter Tool Wear" name="Tool_wear" value="0" required="required"><br>
+               </div>
+
+               <div class = "form-group">
+                   <label for ="TWF">TWF:</label><br>
+                   <input type="text" class ="form-control" id="TWF" placeholder=" Enter Tool Wear Failure" name="TWF" value ="0" required="required"><br>
+               </div>
+
+               <div class ="form-group">
+                   <label for ="HDF">HDF:</label><br>
+                   <input type="text" class ="form-control" id="HDF" placeholder="Enter Heat Dissipation Failure" name="HDF" value = "0" required="required"><br>
+               </div>
+
+              <div class ="form-group">
+                   <label for ="PWF">PWF:</label><br>
+                   <input type="text" class ="form-control" id="PWF" placeholder="Enter Power Failure" name="PWF" value = "0" required="required"><br>
+               </div>
+
+               <div class ="form-group">
+                   <label for ="OSF">OSF:</label><br>
+                   <input type="text" class ="form-control" id="OSF" placeholder="Enter Oriental Failure" name="OSF" value = "0" required="required"><br>
+               </div>
+
+                <div class ="form-group">
+                   <label for ="RNF">RNF:</label><br>
+                   <input type="text" class ="form-control" id="RNF" placeholder="Enter Oriental Failure" name="RNF" value = "0" required="required"><br>
+               </div>
+
+
+               <br>
+               <button type="submit" class="btn btn-outline-warning">Predict</button>
+   
+   
+           </form>
+
+           <h3><strong>{{ prediction_text }}</strong></h3>
+
+       </div>
+
+       <footer>
+            <a href="https://www.linkedin.com/in/mayurborkar/" target="_blank"><i class="fa fa-linkedin"></i></a>
+            <a href="https://github.com/mayurborkar" target="_blank"><i class="fa fa-github"></i></a>
+            <br>
+
+            <small class="copyright text-muted">copyright@: Mayur Borkar</small>
+       </footer>
+   
+   </body>
+   </html>
