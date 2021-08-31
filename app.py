@@ -11,6 +11,10 @@ model = pickle.load(open('ridge_reg.sav', 'rb'))
 def home():
     return render_template('home.html')
 
+@app.route('/report')
+def report():
+    return render_template('regression.html')
+
 @app.route('/predict', methods=['GET', 'POST'])
 def predict():
 
